@@ -1,14 +1,16 @@
 package io.javabrains.ipldashboard.model;
 
 import java.time.LocalDate;
-
+import javax.persistence.Entity;
+import javax.persistence.Id;
 import lombok.Getter;
 import lombok.Setter;
 
-
+@Entity
 @Getter @Setter
 public class Match {
   
+  @Id
   private Long id;
   private String city;
   private LocalDate date;
