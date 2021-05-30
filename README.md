@@ -1,2 +1,2 @@
 # IPL_LeaderBoard
-Spring + react (full stack application)
+Spring + react + mysql (full stack application)
