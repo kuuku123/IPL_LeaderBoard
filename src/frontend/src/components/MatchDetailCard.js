@@ -1,5 +1,6 @@
 import React from "react";
 import {Link}  from 'react-router-dom';
+import '../components/styles/MatchDetailCard.scss';
 
 const MatchDetailCard = ({ teamName, match }) => {
   if (!match) return null;
@@ -7,7 +8,6 @@ const MatchDetailCard = ({ teamName, match }) => {
   const otherTeamRoute = `/teams/${otherTeam}`
   return (
     <div className="MatchDetailCard">
-      <h3>Latest Matches</h3>
       <h1>vs 
         <Link to={otherTeamRoute}>
         {otherTeam}

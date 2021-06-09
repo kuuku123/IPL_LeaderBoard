@@ -1,0 +1,67 @@
+@import "config";
+
+.TeamPage {
+  display: grid;
+
+  grid-template-columns: repeat(4, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+
+  grid-column-gap: 10px;
+  grid-row-gap: 20px;
+
+  .team-name-section {
+    grid-column: span 3;
+    justify-self: start;
+    align-self: end;
+    font-size: 4rem;
+    display: inline-block;
+    animation: myAnimation 3s ease-in-out infinite;
+    animation-direction: alternate;
+  }
+
+  .match-detail-section {
+    grid-column: span 4;
+    .body2 {
+      background: white;
+      display: flex;
+      flex-direction: column;
+      height: 10vh;
+      justify-content: start;
+      align-items: start;
+    }
+
+    .words {
+      color: red;
+      font-size: 0;
+      line-height: 1.5;
+    }
+
+    .words span {
+      font-size: 3rem;
+      display: inline-block;
+      animation: move 1.5s ease-in-out infinite;
+      animation-direction: alternate;
+    }
+  }
+
+  .Wins {
+    display: inline-block;
+    &:hover {
+      color: blue;
+    }
+    &.touched {
+      transform: rotate(720deg);
+    }
+    @include transition-ease;
+  }
+  .Losses {
+    display: inline-block;
+    &:hover {
+      color: red;
+    }
+    &.touched {
+      transform: rotate(720deg);
+    }
+    @include transition-ease;
+  }
+}
