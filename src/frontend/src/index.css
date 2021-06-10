@@ -8,6 +8,7 @@
 
 a {
   text-decoration: none;
+  color: blueviolet;
 }
 
 body {
@@ -16,6 +17,10 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 25px;
+  background-color: #282c34;
+  color: aliceblue;
+  max-width: 1400px;
+  margin: 0 auto;
 }
 body::-webkit-scrollbar {
   display: none;

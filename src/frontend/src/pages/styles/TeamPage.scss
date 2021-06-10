@@ -4,44 +4,57 @@
   display: grid;
 
   grid-template-columns: repeat(4, 1fr);
-  grid-template-rows: repeat(3, 1fr);
+  grid-template-rows: 0.5fr 1fr 1fr ; 
 
   grid-column-gap: 10px;
   grid-row-gap: 20px;
 
   .team-name-section {
+    :hover {
+      animation: myAnimation 0.4s ease-in-out infinite;
+      animation-direction: alternate;
+    }
     grid-column: span 3;
     justify-self: start;
-    align-self: end;
-    font-size: 4rem;
+    align-self: start;
+    font-size: 3rem;
     display: inline-block;
-    animation: myAnimation 3s ease-in-out infinite;
-    animation-direction: alternate;
   }
 
   .match-detail-section {
     grid-column: span 4;
-    .body2 {
-      background: white;
-      display: flex;
-      flex-direction: column;
-      height: 10vh;
-      justify-content: start;
-      align-items: start;
-    }
-
     .words {
-      color: red;
-      font-size: 0;
-      line-height: 1.5;
+      span {
+        font-size: 2rem;
+      }
     }
 
-    .words span {
-      font-size: 3rem;
-      display: inline-block;
-      animation: move 1.5s ease-in-out infinite;
-      animation-direction: alternate;
+    :hover {
+      .body2 {
+        background: white;
+        display: flex;
+        flex-direction: column;
+        height: 10vh;
+        justify-content: start;
+        align-items: start;
+      }
+
+      .words {
+        color: red;
+        font-size: 0;
+        line-height: 1.5;
+      }
+
+      .words span {
+        display: inline-block;
+        animation: move 0.4s ease-in-out infinite;
+        animation-direction: alternate;
+      }
     }
+  }
+  .Win-loss-section {
+    text-align: right;
+    margin-top: 10px;
   }
 
   .Wins {
@@ -50,7 +63,7 @@
       color: blue;
     }
     &.touched {
-      transform: rotate(720deg);
+      transform: rotate(180deg);
     }
     @include transition-ease;
   }
@@ -60,7 +73,7 @@
       color: red;
     }
     &.touched {
-      transform: rotate(720deg);
+      transform: rotate(-180deg);
     }
     @include transition-ease;
   }
