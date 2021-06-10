@@ -1,5 +1,5 @@
 # IPL_LeaderBoard
-Spring + react + mysql (full stack application)
+Spring + react (+scss) + mysql (full stack application)
 
 to run this 
 open 2 terminal
