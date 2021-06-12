@@ -3,12 +3,17 @@ import { useParams } from "react-router-dom";
 import MatchDetailCard from "../components/MatchDetailCard";
 import MatchSmallCard from "../components/MatchSmallCard";
 import "./styles/TeamPage.scss";
+import { PieChart } from "react-minimal-pie-chart";
 
 const TeamPage = () => {
   const [team, setTeam] = useState({ matches: [] });
   const { teamName } = useParams();
   const winRefs = useRef();
   const loseRefs = useRef();
+
+  const defaultLabelStyle = {
+  fontSize: '17px',
+};
 
   function MouseEnter(r) {
     r.current.classList.add("touched");
@@ -58,6 +63,22 @@ const TeamPage = () => {
         >
           Losses
         </span>
+        <PieChart
+          data={[
+            {
+              title: "Loss",
+              value: team.totalMatches - team.totalWins,
+              color: "#a34d5d",
+            },
+            { title: "Win", value: team.totalWins, color: "#4da375" },
+          ]}
+          viewBoxSize={[130, 90]}
+          center={[80, 50]}
+          label={({ dataEntry }) => `${dataEntry.title} : ${dataEntry.value}` }
+           labelStyle={{
+          ...defaultLabelStyle,
+        }}
+        />
       </h1>
 
       <div className="match-detail-section">
@@ -82,8 +103,8 @@ const TeamPage = () => {
         );
       })}
 
-      <div>
-        <a href="#">More</a>
+      <div className="more-link">
+        <a href="#">More ></a>
       </div>
     </div>
   );

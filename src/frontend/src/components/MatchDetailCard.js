@@ -6,8 +6,10 @@ const MatchDetailCard = ({ teamName, match }) => {
   if (!match) return null;
   const otherTeam = match.team1 === teamName ? match.team2 : match.team1;
   const otherTeamRoute = `/teams/${otherTeam}`;
+  const isMatchWon = teamName === match.matchWinner;
+
   return (
-    <div className="MatchDetailCard">
+    <div className={isMatchWon ? 'MatchDetailCard won-card' : "MatchDetailCard lost-card"}>
       <div>
         <span className="vs">vs</span>
         <h1>

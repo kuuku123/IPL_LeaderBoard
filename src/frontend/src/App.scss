@@ -1,4 +1,27 @@
+@import './pages/styles/config';
+
 .App {
   padding-left: 3em;
   text-align: left;
+}
+
+
+.won-card {
+  background:
+    linear-gradient(
+      to right,
+      rgba($primary-color, 0.8),
+      rgba($primary-color,0.2)
+    );
+
+  background-color: #4da375
+}
+.lost-card {
+  background:
+    linear-gradient(
+      to right,
+      rgba($primary-color, 0.8),
+      rgba($primary-color,0.2)
+    );
+  background-color: #a34d5d
 }
