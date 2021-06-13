@@ -16,10 +16,10 @@ body {
   font-family: "Indie Flower", cursive;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
-  font-size: 25px;
+  font-size: 19px;
   background-color: #282c34;
   color: aliceblue;
-  max-width: 1400px;
+  max-width: 1200px;
   margin: 0 auto;
 }
 body::-webkit-scrollbar {
