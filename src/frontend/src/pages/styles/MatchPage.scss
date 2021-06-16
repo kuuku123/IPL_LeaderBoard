@@ -1,7 +1,7 @@
 .MatchPage {
   margin-top: 40px;
   display: grid;
-  grid-template-columns: 1fr 5fr;
+  grid-template-columns: 1fr 5fr 1fr;
   grid-column-gap: 20px;
 
   .year-selector {

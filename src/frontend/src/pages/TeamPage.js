@@ -26,7 +26,7 @@ const TeamPage = () => {
   useEffect(() => {
     try {
       const fetchTeam = async () => {
-        const response = await fetch(`http://localhost:8081/team/${teamName}`);
+        const response = await fetch(`${process.env.REACT_APP_API_ROOT_URL}/team/${teamName}`);
         const data = await response.json();
         setTeam(data);
       };
@@ -82,6 +82,11 @@ const TeamPage = () => {
         />
       </h1>
 
+      <div>
+        <h1>
+          <Link to={`/`}>Home</Link>
+        </h1>
+      </div>
       <div className="match-detail-section">
         <div className="body2">
           <div className="words word-1">
@@ -94,11 +99,11 @@ const TeamPage = () => {
         ></MatchDetailCard>
       </div>
 
-      {team.matches.slice(1).map((match, index) => {
+      {team.matches.slice(1).map((match) => {
         return (
           <MatchSmallCard
             teamName={team.teamName}
-            key={index}
+            key={match.id}
             match={match}
           ></MatchSmallCard>
         );
@@ -107,6 +112,8 @@ const TeamPage = () => {
       <div className="more-link">
         <Link to={`/teams/${teamName}/matches/${process.env.REACT_APP_DATA_END_YEAR}`}>More ></Link>
       </div>
+
+
     </div>
   );
 };
