@@ -7,3 +7,5 @@ to run this
 open 2 terminal
 first in current directory run command ".\gradlew bootRun" 
 second go to src/frontend/ and run command "yarn start"
+
+![image](https://user-images.githubusercontent.com/52444134/122516795-28775a80-d04a-11eb-9ec1-2151bca45c08.png)
