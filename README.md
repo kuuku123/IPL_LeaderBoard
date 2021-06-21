@@ -1,5 +1,5 @@
 # IPL_LeaderBoard
-Spring + react (+scss) + mysql (full stack application)
+Spring + JPA + react (+scss) + mysql (full stack application)
 
 aws beanstalk url = http://ipldashboard-env.eba-8yybcwpb.ap-northeast-2.elasticbeanstalk.com/#/
 
