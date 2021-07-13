@@ -1,7 +1,7 @@
 # IPL_LeaderBoard
 Spring + JPA + react (+scss) + mysql (full stack application)
 
-aws beanstalk url = http://ipldashboard-env.eba-8yybcwpb.ap-northeast-2.elasticbeanstalk.com/#/
+aws beanstalk url = http://iplleaderboard-env.eba-dnzxne4v.ap-northeast-2.elasticbeanstalk.com/#/
 
 to run this in local\
 open 2 terminal\
